@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { evaluate } from 'mathjs';
 
 
  function App() {
@@ -10,9 +11,13 @@ import './App.css';
     setValue(value + e.target.innerHTML)
   }
 
-  function equal(){
-    setValue(eval(value))
+  function equal() {
+  try {
+    setValue(evaluate(value).toString());
+  } catch {
+    setValue("Error");
   }
+}
 
   function AC(){
     setValue("")
