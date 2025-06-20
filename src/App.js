@@ -25,7 +25,7 @@ import './App.css';
   return (
     <>
       <div className='calculator'>
-        <h2>Calculator App</h2>
+        <h2>CASIO</h2>
         <input type="text"
         placeholder='0'
         value={value}/>
